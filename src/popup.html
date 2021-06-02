@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="button.css">
 </head>
 <body>
-<button id="changeColor"></button>
+<p id="sample">Hello</p>
+
+        <h1>Welcome to slot availability registration</h1>
+        <p>Please fill in this form to know slot availability.</p>
+        <hr>
+
+        <label for="pincode"><b>Pincode</b></label>
+        <input type="text" placeholder="Enter Pincode" name="pincode" id="pincode" required>
+        <br>
+        <br>
+
+        <b>Age</b>
+        <br>
+        <input type="radio" id="age18" name="age" value="18" required>
+        <label for="age18">18+</label>
+        <input type="radio" id="age45" name="age" value="45">
+        <label for="age45">45+</label><br>
+        <br>
+
+        <b>Dose</b>
+        <br>
+        <input type="radio" id="dose1" name="dose" value="dose1" required>
+        <label for="dose1">Dose 1</label>
+        <input type="radio" id="dose2" name="dose" value="dose2">
+        <label for="dose2">Dose 2</label><br>
+
+        <hr>
+        <button type="submit" class="registerbtn", id="register">Register</button>
 <script src="popup.js"></script>
 </body>
 </html>

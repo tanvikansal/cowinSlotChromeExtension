@@ -4,9 +4,10 @@
   "version": "1.0",
   "manifest_version": 2,
   "background": {
-    "scripts": ["src/background.js"]
+    "scripts": ["src/background.js","src/popup.js"]
   },
-  "permissions": ["storage","*://cdn-api.co-vin.in/*","notifications"],
+  "permissions": ["storage","*://cdn-api.co-vin.in/*","notifications","declarativeContent"],
+
   "page_action": {
     "default_popup": "src/popup.html",
     "default_icon": {
