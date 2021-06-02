@@ -29,3 +29,5 @@ When slot is available you will get a notification something as below:
 <img width="377" alt="Screenshot 2021-06-02 at 8 32 49 PM" src="https://user-images.githubusercontent.com/37088169/120504416-bd8b1a00-c3e1-11eb-95b2-f8496fc9b412.png">
 
 Go to cowin app and make registration once you get notification!
+
+
