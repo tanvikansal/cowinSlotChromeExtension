@@ -1,5 +1,8 @@
 const submit = ()=>{
     const pincode = document.getElementById("pincode").value;
+    const date = document.getElementById("date").value;
+    chrome.storage.local.set({'date':date}, ()=>{
+        });
     chrome.storage.local.set({'pincode':pincode}, ()=>{
     });
     document.getElementsByName("age").forEach(element => {
