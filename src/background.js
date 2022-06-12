@@ -3,6 +3,8 @@ const getDoseAvailability = (session,dose) => {
         return session.available_capacity_dose1;
     if(dose === "dose2")
         return session.available_capacity_dose2;
+    if(dose === "precaution_dose")
+        return session.precaution_online_dose_one_available;
 }
 
 const slotInfoFiltering = (filter,data) => {
@@ -19,9 +21,9 @@ const getData = (delay) =>{
     const time = new Date();
     setTimeout(async () => {
         console.log('Current Time', `${time}`)
-        chrome.storage.local.get(['pincode'], async (result) => {
-            const {pincode} = result;
-            const response = await fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=${pincode}&date=${new Date().getDate()}`, {
+        chrome.storage.local.get(['pincode','date'], async (result) => {
+            const {pincode , date} = result;
+            const response = await fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=${pincode}&date=${date}`, {
                 method: 'GET',
                 headers: {
                     'Accept-Language': 'hi_IN',
@@ -55,7 +57,7 @@ const getData = (delay) =>{
 
         });
         getData(delay + 1);
-    },delay * 3000);
+    },delay * 6000);
 }
 
 
